@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #070000;
+        }
+
+        .carrossel-container {
+            position: relative;
+            width: 80%;
+            max-width: 500px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .carrossel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 1000%;
+        }
+
+        .carrossel img {
+            width: 10%;
+            flex-shrink: 0;
+        }
+
+        .botao {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+
+        .botao:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .anterior {
+            left: 10px;
+        }
+
+        .proximo {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carrossel-container">
+        <button class="botao anterior" onclick="mudarImagem(-1)">&#10094;</button>
+        <div class="carrossel">
+            <img src="https://i.pinimg.com/736x/62/6c/7d/626c7d6c9102f73748c58c840a4211f8.jpg" alt="Imagem 1">
+            <img src="https://i.pinimg.com/474x/af/ca/33/afca3363658d4d10e1f5b5d5735d4007.jpg" alt="Imagem 2">
+            <img src="https://i.pinimg.com/236x/e3/49/40/e34940f892cabd1c96653cee9ee74c88.jpg" alt="Imagem 3">
+            <img src="https://i.pinimg.com/236x/14/12/7e/14127ea45d69bf65579325f3a503f3e7.jpg" alt="Imagem 4">
+            <img src="https://i.pinimg.com/236x/bb/6d/bd/bb6dbd3f8b2ed1ebbaa4eccf16433edb.jpg" alt="Imagem 5">
+            <img src="https://i.pinimg.com/236x/eb/8d/10/eb8d10d4ad142799cc4c5730a6e74d41.jpg" alt="Imagem 6">
+            <img src="https://i.pinimg.com/474x/fc/fa/72/fcfa725bfa3bfaf2fd273ac87be02572.jpg" alt="Imagem 7">
+            <img src="https://i.pinimg.com/474x/fd/74/67/fd7467d75818562e08fd3636a07de264.jpg" alt="Imagem 8">
+            <img src="https://i.pinimg.com/236x/59/3c/26/593c2688d9f741b498d7ddee6e73e2ab.jpg" alt="Imagem 9">
+            <img src="https://i.pinimg.com/236x/4c/a1/f2/4ca1f29286a24abf134c0633bbfea30e.jpg" alt="Imagem 10">
+            
+        </div>
+        <button class="botao proximo" onclick="mudarImagem(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let indice = 0;
+        const total = 10; // Total de imagens
+        const carrossel = document.querySelector(".carrossel");
+
+        function mudarImagem(direcao) {
+            indice += direcao;
+            if (indice < 0) {
+                indice = total - 1;
+            } else if (indice >= total) {
+                indice = 0;
+            }
+
+            const deslocamento = -indice * 100 / total + "%";
+            carrossel.style.transform = `translateX(${deslocamento})`;
+        }
+    </script>
+
+</body>
+</html>
