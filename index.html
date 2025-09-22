@@ -1,101 +1,136 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
     <title>Salão Modelo</title>
 </head>
 <body>
-    
-<header>
-    <nav>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Seção 1 - Hero -->
+    <section class="hero" id="hero">
+        <div class="floating-elements" id="floatingElements"></div>
+        <div class="hero-content">
+            <h1 id="heroTitle">SALÃO MODELO</h1>
+
+            <h2 style="color: yellow; font-size: 18px;">BARBEIRO BELMIRO</h2>
+
+            <p id="heroSubtitle">UM HOMEM MODERNO TAMBÉM CUIDA DO SEU VISUAL</p>
+            <div class="hero-buttons" id="heroButtons">
+                <a href="https://wa.me/qr/ZNKXHNMVYYIIG1" class="btn btn-primary" id="btnContato">
+                    <span>📱</span> Contato
+                </a>
+                <a href="https://instagram.com/cabeleirereiro/" class="btn btn-secondary" id="btnInstagram">
+                    <span>📷</span> Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 2 - História -->
+    <section class="historia" id="historia">
+        <div class="container">
+            <div class="historia-content">
+                <div class="historia-image" id="historiaImage">
+                    <img src="./img/bel.jpg" alt="">
+                </div>
+                <div class="historia-text" id="historiaText">
+                    <h2>Nossa História</h2>
+                    <p>Bem-vindo ao Salão Modelo, um espaço dedicado a realçar sua beleza e proporcionar momentos de cuidado e bem-estar. Desde o ano de 2003, estamos no mercado de trabalho, oferecendo experiências únicas para nossos clientes. Aqui, acreditamos que cada pessoa é única, e nosso compromisso é trazer à tona o melhor de cada cliente com serviços personalizados e de alta qualidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 3 - Cortes -->
+    <section class="cortes" id="cortes">
+        <div class="container">
+            <h2 class="section-title" id="cortesTitle">Nossos Cortes</h2>
+            <div class="cortes-grid" id="cortesGrid">
+                <div class="corte-item" data-delay="100">
+                    <div class="corte-content" style="background-image: url('https://i.pinimg.com/474x/35/24/4c/35244c6c4e0c0708a45f2fce8b162ee8.jpg');"></div>
+                    <h3>Cortes</h3>
+                </div>
+
+
+                <div class="corte-item" data-delay="100">
+                    <div class="corte-content" style="background-image: url('https://i.pinimg.com/736x/a9/cf/bd/a9cfbd241ff7f10d7e5fc82e6002380b.jpg');"></div>
+                    <h3>Cortes</h3>
+                </div>
+                <div class="corte-item" data-delay="100">
+                    <div class="corte-content" style="background-image: url('https://i.pinimg.com/736x/44/a9/f2/44a9f28cb2c377b11652ba4a50d1ebd7.jpg');"></div>
+                    <h3>Cortes</h3>
+                </div>
+                <div class="corte-item" data-delay="100">
+                    <div class="corte-content" style="background-image: url('https://i.pinimg.com/736x/10/2f/ce/102fce91d3ff45b801f4530b8309852a.jpg');"></div>
+                    <h3>Cortes</h3>
+                </div>
+        </div>
+    </section>
+
+    <!-- Seção 4 - Produtos -->
+    <section class="produtos" id="produtos">
+        <div class="container">
+            <h2 class="section-title" id="produtosTitle">Nossos Produtos</h2>
+            <div class="produtos-grid" id="produtosGrid">
+                <div class="produto-item" data-delay="0">
+                    <div class="produto-image" style="background-image: url('./img/pomada.jpg');"></div>
+                        <h3>Pomada Modeladora</h3>
+                </div>
+                <div class="produto-item" data-delay="100">
+                    <div class="produto-image" style="background-image: url('./img/gel.jpg');"></div>
+                        <h3>Gel Preto</h3>
+                </div>
+                <div class="produto-item" data-delay="200">
+                    <div class="produto-image" style="background-image: url('./img/maquina.jpg');"></div>
+                        <h3>Maquininha</h3>
+                </div>
+
+
+                <div class="produto-item" data-delay="300">
+                    <div class="produto-image" style="background-image: url('./img/escova.jpg');"></div>
+                        <h3>Escovinha</h3>
+                </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>📍 Av. Buda, 182 - Centro</p>
+                    <p>📱 (38) 99985-7843</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horários</h3>
+                    <p>Segunda a Sexta: 8h às 19h</p>
+                    <p>Sábado: 8h às 19h</p>
+                    <p>Domingo: Fechado</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Desenvolvedor</h3>
+                    <p>Welterson Gabriel </p>
+                    <p>(38) 99866-1848</p>
+                    <p>weltersongabriel.ti@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Salão Modelo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js">
  
-    </nav>
-
-</header>
-
-
-<main>
-    <section class="first=section">
-        <div>
-            <h1 class="salao">Salão <br> <strong style="color: rgb(25, 0, 255); font-family:Georgia, 'Times New Roman', Times, serif ;">Modelo</strong></h1><br>
-            <p class="frase">UM HOMEM MODERNO TAMBÉM CUIDA DO SEU VISUAL.</p> <br><br><br>
-            <a class="btn-contato" href="https://wa.me/qr/ZNKXHNMVYYIIG1">Contato</a>
-        </div>
-
-    </section>
-
-    <section id="História" class="third-section">
-        <div>
-            <h1 class="title">História</h1><br>
-            <img class="img-who-am-i" src="sm.jpg" alt="sm">
-
-            <br><br><br>
-        <p class="p">Bem-vindo ao Salão Modelo, um espaço dedicado a realçar sua beleza e proporcionar momentos de cuidado e bem-estar. Desde o ano de 2003, estamos no mercado de trabalho, oferecendo experiências únicas para nossos clientes. Aqui, acreditamos que cada pessoa é única, e nosso compromisso é trazer à tona o melhor de cada cliente com serviços personalizados e de alta qualidade.</p>
-        </div>
-    </section>
-
-    <section id="Produtos" class="second-section">
-        
-    </section>
-
-    <section class="menu" id="menu">
-
-        <h1 class="heading">Nossos <span>Produtos</span> </h1>
-    
-        <div class="box-container">
-    
-            <div class="box">
-                <img src="./pomada.jpg" alt="">
-                <h3 style="font-size: 30px;">Pomada</h3>
-                <div class="price">$ 10,00 <span></span></div>
-                
-            </div>
-    
-            <div class="box">
-                <img src="./gel.jpg" alt="">
-                <h3 style="font-size: 30px;"> Gel</h3>
-                <div class="price">$ 15,00 <span></span></div>
-                
-            </div>
-    
-            <div class="box">
-                <img src="./maquina.jpg" alt="">
-                <h3 style="font-size: 30px;">Maquininha</h3>
-                <div class="price">$ 50,00 <span></span></div>
-                
-            </div>
-
-            <div class="box">
-                <img src="./escova.jpg" alt="">
-                <h3 style="font-size: 30px;">Escovas</h3>
-                <div class="price">$ 2,00 <span></span></div>
-               
-            </div>
-<div>
-    <button>
-        <a style="color: rgb(10, 10, 10); font-family:Georgia, 'Times New Roman', Times, serif ;" class="btn-cortes"  href="./cortes.html">  CORTES</a>
-    </button>
-</div>
-    <br><br>
-        </div>
-    <br><br>
-    <section class="footer">
-    
-        <div class="credit">Desenvolvido por <span style="color: rgb(16, 232, 240);" >Welterson Gabriel</span></div>
-    
-    </section>
-
-
-
-</main>
-
-
-
-
-
-
-
+    </script>
 </body>
 </html>
