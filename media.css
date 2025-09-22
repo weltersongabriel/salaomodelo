@@ -1,0 +1,80 @@
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;  /* Reduzindo o tamanho da fonte */
+        margin-bottom: 10px;  /* Ajustando a margem */
+    }
+
+    .hero p {
+        font-size: 1.1rem;  /* Ajustando o tamanho do texto */
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;  /* Garantindo que o botão não fique muito largo */
+    }
+
+    /* Seção História */
+    .historia-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .historia-image {
+        height: auto;
+        width: 100%;
+        border-radius: 10px; /* Reduzindo bordas para telas pequenas */
+    }
+
+    .cortes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .corte-item {
+        height: 250px;
+        border-radius: 15px;
+        clip-path: none !important;
+    }
+
+    /* Ajuste nos itens de produtos */
+    .produtos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+    }
+
+    .produto-item {
+        padding: 20px;
+        transform: translateY(0);
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Adicionando responsividade para telas maiores que 768px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .historia-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cortes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
