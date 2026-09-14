@@ -1,136 +1,262 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
-    <title>Salão Modelo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Salão Modelo — Cortes, cuidado e tradição</title>
+<meta name="description" content="Salão Modelo: cortes, produtos e cuidado capilar. Agende com a equipe e conheça nossos serviços.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['"Work Sans"', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Loading Screen -->
-    <div class="loading" id="loading">
-        <div class="loading-spinner"></div>
+
+<body class="font-sans antialiased">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 backdrop-blur border-b divider" style="background:color-mix(in srgb, var(--bg) 88%, transparent);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#inicio" class="font-serif text-xl tracking-tight">Salão Modelo</a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm">
+      <a href="#sobre" class="hover:opacity-70 transition-opacity">Sobre</a>
+      <a href="#produtos" class="hover:opacity-70 transition-opacity">Produtos</a>
+      <a href="#cortes" class="hover:opacity-70 transition-opacity">Cortes</a>
+      <a href="#horarios" class="hover:opacity-70 transition-opacity">Horários</a>
+      <a href="#contato" class="hover:opacity-70 transition-opacity">Contato</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+      <a href="tel:+553899857843" class="hidden sm:inline-flex btn-primary text-sm px-4 py-2 rounded-full">(38) 99985-7843</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="max-w-6xl mx-auto px-6 pt-16 pb-20 grid md:grid-cols-2 gap-12 items-center">
+  <div>
+    <p class="text-sm muted mb-4">Segunda a sábado · cortes, química e cosméticos</p>
+    <h1 class="font-serif text-4xl sm:text-5xl leading-tight mb-6">
+      Cuidado de verdade,<br>
+      <span class="accent-text">na sua rua.</span>
+    </h1>
+    <p class="muted text-base sm:text-lg mb-8 max-w-md">
+      O Salão Modelo existe pra fazer o corte certo, sem pressa e sem enrolação —
+      com produtos de qualidade e uma equipe que conhece seu cabelo.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href="tel:+553899857843" class="btn-primary px-6 py-3 rounded-full text-sm font-medium">Ligar e agendar</a>
+      <a href="#cortes" class="px-6 py-3 rounded-full text-sm font-medium border divider">Ver cortes e preços</a>
+    </div>
+  </div>
+
+  <div class="relative">
+    <img src="./img/sm.jpg" alt="Fachada do Salão Modelo" class="frame-photo rounded-sm w-full object-cover aspect-[4/5] sm:aspect-[5/4]">
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="border-t divider">
+  <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-5 gap-12">
+    <div class="md:col-span-2">
+      <h2 class="font-serif text-3xl mb-4">Sobre o cabeleireiro</h2>
+      <p class="muted">Quem cuida do seu corte, dia após dia.</p>
+    </div>
+    <div class="md:col-span-3 space-y-4 text-base leading-relaxed">
+      <p>
+        Anos de bancada ensinam mais do que curso nenhum. O responsável técnico do
+        Salão Modelo construiu a clientela na base da indicação — atendendo com calma,
+        ouvindo o que a pessoa quer antes de pegar na tesoura.
+      </p>
+      <p class="muted">
+        Especialidades: corte masculino e feminino, química, luzes, sobrancelha e
+        alongamento — tudo feito na casa, sem terceirizar etapa nenhuma.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos" class="border-t divider">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <h2 class="font-serif text-3xl">Produtos e cosméticos</h2>
+      <p class="muted text-sm">Venda direta no salão</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="surface border rounded-sm p-6">
+        <div class="w-10 h-10 rounded-full mb-4 flex items-center justify-center" style="background:var(--accent-soft)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-5 h-5 accent-text"><path d="M8 3v4M16 3v4M4 9h16M6 9v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9"/></svg>
+        </div>
+        <h3 class="font-medium mb-1">Shampoos e condicionadores</h3>
+        <p class="text-sm muted">Linhas para uso diário e pós-química.</p>
+      </div>
+      <div class="surface border rounded-sm p-6">
+        <div class="w-10 h-10 rounded-full mb-4 flex items-center justify-center" style="background:var(--accent-soft)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-5 h-5 accent-text"><path d="M12 2v20M5 8c0 3 3 4 7 4s7-1 7-4"/></svg>
+        </div>
+        <h3 class="font-medium mb-1">Finalizadores</h3>
+        <p class="text-sm muted">Cremes, óleos e mousse de fixação.</p>
+      </div>
+      <div class="surface border rounded-sm p-6">
+        <div class="w-10 h-10 rounded-full mb-4 flex items-center justify-center" style="background:var(--accent-soft)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-5 h-5 accent-text"><path d="M4 4h16v4H4zM4 12h10v8H4zM17 12h3v8h-3"/></svg>
+        </div>
+        <h3 class="font-medium mb-1">Coloração</h3>
+        <p class="text-sm muted">Tinturas e produtos para luzes.</p>
+      </div>
+      <div class="surface border rounded-sm p-6">
+        <div class="w-10 h-10 rounded-full mb-4 flex items-center justify-center" style="background:var(--accent-soft)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-5 h-5 accent-text"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 5a5.5 5.5 0 0 1 9.5 7c-2.5 4.5-9.5 9-9.5 9Z"/></svg>
+        </div>
+        <h3 class="font-medium mb-1">Cuidados especiais</h3>
+        <p class="text-sm muted">Reconstrução, hidratação e tratamento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORTES -->
+<section id="cortes" class="border-t divider">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="font-serif text-3xl mb-10">Cortes e serviços</h2>
+    <div class="divide-y divider border-t border-b divider">
+      <div class="flex items-center justify-between py-4">
+        <span>Corte de cabelo</span>
+        <span class="accent-text font-medium">R$ 35,00</span>
+      </div>
+      <div class="flex items-center justify-between py-4">
+        <span>Barba</span>
+        <span class="accent-text font-medium">R$ 25,00</span>
+      </div>
+      <div class="flex items-center justify-between py-4">
+        <span>Luzes</span>
+        <span class="accent-text font-medium">R$ 90,00</span>
+      </div>
+      <div class="flex items-center justify-between py-4">
+        <span>Sobrancelha</span>
+        <span class="accent-text font-medium">R$ 15,00</span>
+      </div>
+      <div class="flex items-center justify-between py-4">
+        <span>Alongamento</span>
+        <span class="accent-text font-medium">Sob consulta</span>
+      </div>
+    </div>
+    <p class="text-sm muted mt-4">* Valores de referência — confirme por telefone antes de agendar.</p>
+  </div>
+</section>
+
+<!-- HORARIOS + PAGAMENTO -->
+<section id="horarios" class="border-t divider">
+  <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16">
+    <div>
+      <h2 class="font-serif text-3xl mb-8">Horário de funcionamento</h2>
+      <div class="space-y-3 text-base">
+        <div class="flex justify-between border-b divider pb-3">
+          <span>Segunda a sábado</span>
+          <span class="muted">09h às 20h</span>
+        </div>
+        <div class="flex justify-between pb-3">
+          <span>Domingo</span>
+          <span class="muted">Fechado</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Seção 1 - Hero -->
-    <section class="hero" id="hero">
-        <div class="floating-elements" id="floatingElements"></div>
-        <div class="hero-content">
-            <h1 id="heroTitle">SALÃO MODELO</h1>
-
-            <h2 style="color: yellow; font-size: 18px;">BARBEIRO BELMIRO</h2>
-
-            <p id="heroSubtitle">UM HOMEM MODERNO TAMBÉM CUIDA DO SEU VISUAL</p>
-            <div class="hero-buttons" id="heroButtons">
-                <a href="https://wa.me/qr/ZNKXHNMVYYIIG1" class="btn btn-primary" id="btnContato">
-                    <span>📱</span> Contato
-                </a>
-                <a href="https://instagram.com/cabeleirereiro/" class="btn btn-secondary" id="btnInstagram">
-                    <span>📷</span> Instagram
-                </a>
-            </div>
+    <div>
+      <h2 class="font-serif text-3xl mb-8">Formas de pagamento</h2>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="surface border rounded-sm p-4 flex items-center gap-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-5 h-5 accent2-text"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          <span class="text-sm">Cartão de crédito</span>
         </div>
-    </section>
-
-    <!-- Seção 2 - História -->
-    <section class="historia" id="historia">
-        <div class="container">
-            <div class="historia-content">
-                <div class="historia-image" id="historiaImage">
-                    <img src="./img/bel.jpg" alt="">
-                </div>
-                <div class="historia-text" id="historiaText">
-                    <h2>Nossa História</h2>
-                    <p>Bem-vindo ao Salão Modelo, um espaço dedicado a realçar sua beleza e proporcionar momentos de cuidado e bem-estar. Desde o ano de 2003, estamos no mercado de trabalho, oferecendo experiências únicas para nossos clientes. Aqui, acreditamos que cada pessoa é única, e nosso compromisso é trazer à tona o melhor de cada cliente com serviços personalizados e de alta qualidade.</p>
-                </div>
-            </div>
+        <div class="surface border rounded-sm p-4 flex items-center gap-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-5 h-5 accent2-text"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+          <span class="text-sm">Pix</span>
         </div>
-    </section>
-
-    <!-- Seção 3 - Cortes -->
-    <section class="cortes" id="cortes">
-        <div class="container">
-            <h2 class="section-title" id="cortesTitle">Nossos Cortes</h2>
-            <div class="cortes-grid" id="cortesGrid">
-                <div class="corte-item" data-delay="100">
-                    <div class="corte-content" style="background-image: url('https://i.pinimg.com/474x/35/24/4c/35244c6c4e0c0708a45f2fce8b162ee8.jpg');"></div>
-                    <h3>Social</h3>
-                </div>
-
-
-                <div class="corte-item" data-delay="100">
-                    <div class="corte-content" style="background-image: url('https://i.pinimg.com/736x/a9/cf/bd/a9cfbd241ff7f10d7e5fc82e6002380b.jpg');"></div>
-                    <h3>Degradê</h3>
-                </div>
-                <div class="corte-item" data-delay="100">
-                    <div class="corte-content" style="background-image: url('https://i.pinimg.com/736x/44/a9/f2/44a9f28cb2c377b11652ba4a50d1ebd7.jpg');"></div>
-                    <h3>Americano</h3>
-                </div>
-                <div class="corte-item" data-delay="100">
-                    <div class="corte-content" style="background-image: url('https://i.pinimg.com/736x/10/2f/ce/102fce91d3ff45b801f4530b8309852a.jpg');"></div>
-                    <h3>Barba</h3>
-                </div>
+        <div class="surface border rounded-sm p-4 flex items-center gap-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-5 h-5 accent2-text"><path d="M3 12h18M3 12a9 9 0 0 1 18 0M3 12a9 9 0 0 0 18 0"/></svg>
+          <span class="text-sm">Dinheiro</span>
         </div>
-    </section>
-
-    <!-- Seção 4 - Produtos -->
-    <section class="produtos" id="produtos">
-        <div class="container">
-            <h2 class="section-title" id="produtosTitle">Nossos Produtos</h2>
-            <div class="produtos-grid" id="produtosGrid">
-                <div class="produto-item" data-delay="0">
-                    <div class="produto-image" style="background-image: url('./img/pomada.jpg');"></div>
-                        <h3>Pomada Modeladora</h3>
-                </div>
-                <div class="produto-item" data-delay="100">
-                    <div class="produto-image" style="background-image: url('./img/gel.jpg');"></div>
-                        <h3>Gel Preto</h3>
-                </div>
-                <div class="produto-item" data-delay="200">
-                    <div class="produto-image" style="background-image: url('./img/maquina.jpg');"></div>
-                        <h3>Maquininha</h3>
-                </div>
-
-
-                <div class="produto-item" data-delay="300">
-                    <div class="produto-image" style="background-image: url('./img/escova.jpg');"></div>
-                        <h3>Escovinha</h3>
-                </div>
-
+        <div class="surface border rounded-sm p-4 flex items-center gap-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-5 h-5 accent2-text"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>
+          <span class="text-sm">Cartão de débito</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p>📍 Av. Buda, 182 - Centro</p>
-                    <p>📱 (38) 99985-7843</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Horários</h3>
-                    <p>Segunda a Sexta: 8h às 19h</p>
-                    <p>Sábado: 8h às 19h</p>
-                    <p>Domingo: Fechado</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Desenvolvedor</h3>
-                    <p>Welterson Gabriel </p>
-                    <p>(38) 99866-1848</p>
-                    <p>weltersongabriel.ti@gmail.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Salão Modelo. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+<!-- MAPA -->
+<section id="mapa" class="border-t divider">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="font-serif text-3xl mb-2">Como chegar</h2>
+    <p class="muted text-sm mb-8">
+      Substitua o endereço abaixo pelo endereço real do salão para o mapa apontar certinho.
+    </p>
+    <div class="border divider rounded-sm overflow-hidden">
+      <iframe
+        title="Localização do Salão Modelo"
+        src="https://www.google.com/maps?q=Sal%C3%A3o%20Modelo&output=embed"
+        width="100%" height="420" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
 
-    <script src="./main.js">
- 
-    </script>
+<!-- FOOTER -->
+<footer id="contato" class="border-t divider" style="background:var(--surface);">
+  <div class="max-w-6xl mx-auto px-6 py-14 grid sm:grid-cols-2 gap-10">
+    <div>
+      <p class="font-serif text-xl mb-3">Salão Modelo</p>
+      <p class="text-sm muted mb-1">(38) 99985-7843</p>
+      <p class="text-sm muted">Segunda a sábado, 09h às 20h</p>
+    </div>
+    <div class="sm:text-right">
+      <p class="text-sm muted mb-1">Desenvolvido por</p>
+      <a href="https://weltersongabriel.netlify.app/" target="_blank" rel="noopener" class="text-sm accent-text hover:opacity-80">Welterson Gabriel</a>
+      <p class="text-sm muted mt-1">
+        <a href="https://github.com/weltersongabriel" target="_blank" rel="noopener" class="hover:opacity-80">GitHub</a>
+      </p>
+    </div>
+  </div>
+  <div class="border-t divider">
+    <p class="max-w-6xl mx-auto px-6 py-5 text-xs muted">© 2026 Salão Modelo. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('salaomodelo-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
+
+  toggle.addEventListener('click', () => {
+    root.classList.toggle('dark');
+    localStorage.setItem('salaomodelo-theme', root.classList.contains('dark') ? 'dark' : 'light');
+  });
+</script>
+
 </body>
 </html>
