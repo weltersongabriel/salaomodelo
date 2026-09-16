@@ -9,10 +9,10 @@
     --accent2:#5B6B4F;
   }
   html.dark{
-    --bg:#17130F;
+    --bg:#020101;
     --surface:#221C17;
-    --border:#332A21;
-    --text:#F3EAE0;
+    --border:#0e0c09;
+    --text:#ffffff;
     --muted:#A99A8B;
     --accent:#C1875A;
     --accent-soft:#4A3A2C;
@@ -52,7 +52,73 @@
     box-shadow: 8px 8px 0 0 var(--accent-soft);
   }
 
+  /* Foto redonda da home com brilho */
+  .hero-photo-wrap{
+    position:relative;
+    width:min(320px, 70vw);
+    aspect-ratio:1/1;
+  }
+  .hero-photo-wrap::before{
+    content:"";
+    position:absolute;
+    inset:-18px;
+    border-radius:50%;
+    background:radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+    filter:blur(24px);
+    opacity:.9;
+    z-index:0;
+  }
+  .hero-photo{
+    position:relative;
+    z-index:1;
+    display:block;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--accent-soft);
+  }
+
+  /* Carrossel (marquee) de Produtos e Cortes */
+  .marquee-wrap{
+    overflow:hidden;
+    position:relative;
+    width:100%;
+    -webkit-mask-image:linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    mask-image:linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  }
+  .marquee-track{
+    display:flex;
+    gap:1.5rem;
+    width:max-content;
+    padding:0 1.5rem;
+    animation:marquee-scroll 26s linear infinite;
+  }
+  .marquee-wrap:hover .marquee-track{
+    animation-play-state:paused;
+  }
+  @keyframes marquee-scroll{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+  }
+  .marquee-card{
+    flex:0 0 auto;
+    width:180px;
+    text-align:center;
+  }
+  .marquee-card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:.25rem;
+    border:1px solid var(--border);
+    margin-bottom:.75rem;
+    background:var(--surface);
+  }
+  .marquee-card p{ margin:0; }
+
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
     *{ transition:none !important; }
+    .marquee-track{ animation:none; }
   }
