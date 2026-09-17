@@ -81,20 +81,27 @@
 
   /* Carrossel (marquee) de Produtos e Cortes */
   .marquee-wrap{
-    overflow:hidden;
+    overflow-x:auto;
+    overflow-y:hidden;
     position:relative;
     width:100%;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
     -webkit-mask-image:linear-gradient(to right, transparent, black 6%, black 94%, transparent);
     mask-image:linear-gradient(to right, transparent, black 6%, black 94%, transparent);
   }
+  .marquee-wrap::-webkit-scrollbar{ display:none; }
   .marquee-track{
     display:flex;
     gap:1.5rem;
     width:max-content;
     padding:0 1.5rem;
-    animation:marquee-scroll 26s linear infinite;
+    animation:marquee-scroll 15s linear infinite;
+    will-change:transform;
+    backface-visibility:hidden;
   }
-  .marquee-wrap:hover .marquee-track{
+  .marquee-wrap:hover .marquee-track,
+  .marquee-wrap:focus-within .marquee-track{
     animation-play-state:paused;
   }
   @keyframes marquee-scroll{
@@ -120,5 +127,9 @@
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior:auto; }
     *{ transition:none !important; }
-    .marquee-track{ animation:none; }
+    .marquee-track{
+      animation:none;
+      /* sem a animação automática, o wrap com overflow-x:auto
+         permite arrastar o carrossel manualmente no touch */
+    }
   }
